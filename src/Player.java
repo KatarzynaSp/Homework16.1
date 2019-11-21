@@ -34,7 +34,7 @@ class Player {
     }
 
     public String toCsv() {
-        return firstName + ";" + lastName + ";" + result + "\n";
+        return firstName + " " + lastName + ";" + result + "\n";
     }
 
     @Override

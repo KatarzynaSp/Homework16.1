@@ -27,6 +27,7 @@ class MethodsCreator {
                 playerList.add(player);
             }
         } while (!(data.toUpperCase()).equals("STOP"));
+        scanner.close();
     }
 
     private static void sort(List<Player> playerList) {
@@ -38,7 +39,6 @@ class MethodsCreator {
         BufferedWriter bfW = new BufferedWriter(new FileWriter(new File("stats.csv")));
         for (Player osoba : playerList) {
             bfW.write(osoba.toCsv());
-            scanner.close();
         }
         bfW.close();
     }
