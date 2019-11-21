@@ -7,7 +7,9 @@ public class ResultComparator implements Comparator<Player> {
             return -1;
         else if (p1.getResult() > p2.getResult())
             return 1;
-        else
-            return 0;
+        else {
+            LastNameComparator nameComparator = new LastNameComparator();
+            return nameComparator.compare(p1, p2);
+        }
     }
 }

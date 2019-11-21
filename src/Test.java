@@ -6,10 +6,8 @@ public class Test {
 
         try {
             MethodsCreator.playerListCreator();
-        } catch (IOException | InputMismatchException e) {
+        } catch (IOException | InputMismatchException | ArrayIndexOutOfBoundsException e) {
             System.err.println(e.getMessage());
-        } finally {
-            MethodsCreator.scanner.close();
         }
     }
 }

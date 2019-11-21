@@ -1,18 +1,28 @@
 class Player {
-    private String name;
+    private String firstName;
+    private String lastName;
     private int result;
 
-    public Player(String name, int result) {
-        this.name = name;
+    public Player(String firstName, String lastName, int result) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.result = result;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public int getResult() {
@@ -24,11 +34,11 @@ class Player {
     }
 
     public String toCsv() {
-        return name + ";" + result + "\n";
+        return firstName + ";" + lastName + ";" + result + "\n";
     }
 
     @Override
     public String toString() {
-        return "Zawodnik : " + name + ", wynik: " + result;
+        return "Zawodnik : " + firstName + " " + lastName + ", wynik: " + result;
     }
 }
